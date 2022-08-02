@@ -1,6 +1,8 @@
 import streamlit as st
 import numpy as np
 import pickle
+import cv2
+
 
 model = pickle.load(open('model_1.pkl', 'rb'))
 test_x = pickle.load(open('test_x.pkl', 'rb'))
@@ -13,6 +15,9 @@ st.text(' ')
 index = st.slider('Select index number from testing dataset : ',1,900,400)
 st.write('Selected Image : ')
 st.image(test_x[index])
+img = test_x[index]
+img = cv2.resize(img, (80,80))
+st.image(img)
 st.write('Actual label for the image = ',classes[np.argmax(test_yc[index])] )
 
 #predict class
