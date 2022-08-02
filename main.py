@@ -10,7 +10,7 @@ classes = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'hors
 
 st.header('CNN Model on CIFAR10 Data for Image Classification')
 st.text(' ')
-index = st.slider('Select index number from testing dataset : ',1,10000,5000)
+index = st.slider('Select index number from testing dataset : ',1,900,400)
 st.write('Selected Image : ')
 st.image(test_x[index])
 st.write('Actual label for the image = ',classes[np.argmax(test_yc[index])] )
