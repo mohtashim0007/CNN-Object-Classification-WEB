@@ -3,3 +3,4 @@ streamlit
 numpy
 keras
 tensorflow-cpu
+opencv-python-headless
