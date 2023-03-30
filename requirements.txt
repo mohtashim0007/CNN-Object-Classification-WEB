@@ -1,6 +1,6 @@
 pip==22.1.2
 streamlit
 numpy
-scikit-learn
+
 tensorflow-cpu
 opencv-python-headless
